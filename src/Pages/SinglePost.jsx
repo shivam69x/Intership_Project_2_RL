@@ -289,50 +289,51 @@ const SinglePost = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="px-4 sm:px-6 lg:px-8 py-16">
-        <div className="max-w-4xl mx-auto">
-          <div className="bg-gradient-to-br from-teal-900/30 to-cyan-900/20 rounded-3xl p-8 sm:p-12 border border-teal-700/30 backdrop-blur-sm text-center">
-            <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-6 leading-tight">
-              Get Started with Our Powerful Cloud Management Service Today
-            </h2>
-            <p className="text-[#71D6CE] text-lg mb-8 max-w-2xl mx-auto">
-              Transform your infrastructure with enterprise-grade cloud solutions designed for scalability, resilience, and optimal performance.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
-              <input
-                type="email"
-                value={emailSignup}
-                onChange={(e) => setEmailSignup(e.target.value)}
-                placeholder="Enter Your e-mail address..."
-                className="flex-1 px-6 py-4 bg-white/90 text-gray-800 placeholder-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-400 focus:bg-white transition-all duration-200"
-              />
-              <button
-                onClick={handleSignup}
-                className="bg-gradient-to-r from-sky-200 to-blue-600 text-white font-semibold px-8 py-4 rounded-lg hover:from-cyan-300 hover:to-blue-600 transform hover:scale-105 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-[#07282C] whitespace-nowrap"
-              >
-                Start Free Trial
-              </button>
-            </div>
-            
-            <div className="flex justify-center items-center space-x-8 mt-8 text-[#71D6CE]">
-              <div className="flex items-center space-x-2">
-                <Users className="w-5 h-5" />
-                <span className="text-sm">10K+ Users</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Zap className="w-5 h-5" />
-                <span className="text-sm">99.9% Uptime</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Shield className="w-5 h-5" />
-                <span className="text-sm">Enterprise Security</span>
-              </div>
-            </div>
-          </div>
+      {/* CTA Section - Mobile First Responsive */}
+<section className="px-5 py-12 sm:py-16 md:px-6 lg:px-8 lg:py-20">
+  <div className="max-w-4xl mx-auto">
+    <div className="bg-gradient-to-br from-teal-900/30 to-cyan-900/20 rounded-3xl p-6 sm:p-10 md:p-12 border border-teal-700/30 backdrop-blur-sm text-center">
+      <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 sm:mb-6 leading-snug sm:leading-tight">
+        Get Started with Our Powerful Cloud Management Service Today
+      </h2>
+      <p className="text-cyan-200 text-base sm:text-lg md:text-xl mb-6 sm:mb-8 max-w-2xl mx-auto">
+        Transform your infrastructure with enterprise-grade cloud solutions designed for scalability, resilience, and optimal performance.
+      </p>
+      
+      <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 max-w-lg mx-auto">
+        <input
+          type="email"
+          value={emailSignup}
+          onChange={(e) => setEmailSignup(e.target.value)}
+          placeholder="Enter your email..."
+          className="flex-1 px-4 py-3 sm:px-5 sm:py-4 bg-white/90 text-gray-800 placeholder-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-400 focus:bg-white transition-all duration-200 text-sm sm:text-base"
+        />
+        <button
+          onClick={handleSignup}
+          className="bg-gradient-to-r from-sky-200 to-blue-600 text-white font-medium sm:font-semibold px-5 py-3 sm:px-8 sm:py-4 rounded-lg hover:from-cyan-300 hover:to-blue-600 transform hover:scale-[1.02] transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-[#07282C] whitespace-nowrap text-sm sm:text-base"
+        >
+          Start Free Trial
+        </button>
+      </div>
+      
+      <div className="flex flex-wrap justify-center items-center gap-x-6 gap-y-3 mt-6 sm:mt-8 text-cyan-200">
+        <div className="flex items-center space-x-2">
+          <Users className="w-4 h-4 sm:w-5 sm:h-5" />
+          <span className="text-xs sm:text-sm">10K+ Users</span>
         </div>
-      </section>
+        <div className="flex items-center space-x-2">
+          <Zap className="w-4 h-4 sm:w-5 sm:h-5" />
+          <span className="text-xs sm:text-sm">99.9% Uptime</span>
+        </div>
+        <div className="flex items-center space-x-2">
+          <Shield className="w-4 h-4 sm:w-5 sm:h-5" />
+          <span className="text-xs sm:text-sm">Enterprise Security</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
     </div>
   );
 };
